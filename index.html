@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerifierHub - Stop Online Scams</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+    <style>
+        :root {
+            --primary-green: #61CE70;
+            --dark-gray: #1F2937;
+            --white: #ffffff;
+            --navy: #0E172A;
+        }
+
+        .bg-primary {
+            background-color: var(--primary-green);
+        }
+
+        .bg-dark {
+            background-color: var(--dark-gray);
+        }
+
+        .bg-navy {
+            background-color: var(--navy);
+        }
+
+        .text-primary {
+            color: var(--primary-green);
+        }
+
+        .text-dark {
+            color: var(--dark-gray);
+        }
+
+        .text-navy {
+            color: var(--navy);
+        }
+
+        .border-primary {
+            border-color: var(--primary-green);
+        }
+
+        .hero-pattern {
+            background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-primary {
+            background: linear-gradient(135deg, #61CE70 0%, #4ade80 25%, #22c55e 50%, #16a34a 75%, #15803d 100%);
+        }
+
+        .hero-pattern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><pattern id='grid' width='10' height='10' patternUnits='userSpaceOnUse'><path d='M 10 0 L 0 0 0 10' fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='0.5'/></pattern></defs><rect width='100' height='100' fill='url(%23grid)'/></svg>");
+            opacity: 0.3;
+            animation: float 20s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .hero-pattern>* {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <header class="bg-white shadow-lg sticky top-0 z-50 border-b-2 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-3">
+
+                <div class="flex items-center space-x-2">
+                    <a href="/" class="rounded-lg flex items-center justify-center">
+                        <img src="https://verifierhub.org/wp-content/uploads/2023/10/Logo.png" alt="VerifierHub Logo"
+                            class="w-12 h-auto">
+                    </a>
+                </div>
+
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#verification"
+                        class="text-dark hover:text-primary font-medium transition-colors">Verification</a>
+                    <a href="#achievements"
+                        class="text-dark hover:text-primary font-medium transition-colors">Achievements</a>
+                    <a href="#contact" class="text-dark hover:text-primary font-medium transition-colors">Contact</a>
+                </nav>
+
+                <button id="mobile-menu-toggle" class="md:hidden text-dark focus:outline-none">
+
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 pb-4">
+                <a href="#verification"
+                    class="block text-dark hover:text-primary font-medium transition-colors">Verification</a>
+                <a href="#achievements"
+                    class="block text-dark hover:text-primary font-medium transition-colors">Achievements</a>
+                <a href="#contact" class="block text-dark hover:text-primary font-medium transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-navy hero-pattern text-white py-10 md:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+
+
+                <div class="w-full lg:w-3/4 space-y-6  relative">
+                    <div class="space-y-6">
+                        <h2
+                            class="text-3xl lg:text-4xl font-extrabold leading-tight text-primary tracking-tight relative">
+                            The Kentucky boy shouldn't have died by suicide.
+                        </h2>
+                        <div class="text-xl  text-green-400 flex flex-col md:flex-row gap-4 md:gap-10">
+                            <p class="font-semibold flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-400" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                Clear your doubt!
+                            </p>
+                            <p class="font-semibold flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-400" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                Verify your suspicion!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 text-lg text-gray-300 leading-relaxed">
+                        <p>
+                            Consider the heartbreaking case of <strong class="text-white">Elijah Heacock</strong>, a
+                            young boy from Kentucky, who tragically took his own life on <strong
+                                class="text-white">February 28, 2025</strong>, after being unable to meet the ransom
+                            demands of scammers threatening to expose his nude photos online.
+                        </p>
+                        <p>
+                            Demand for online fraud prevention is rising as scam-related losses exceed <strong
+                                class="text-primary">$1 trillion annually</strong>, with impacts extending beyond
+                            finances to emotional and psychological harm—even loss of life.
+                        </p>
+                        <p>
+                            To address this, I developed a solution called <strong class="text-primary">VerifierHub
+                                (verifierhub.org)</strong>. VerifierHub helps users of online service marketplaces to
+                            prevent scams by combining AI & Human checks to verify online transactions globally. The key
+                            features are:
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/4 flex flex-col items-center lg:items-start space-y-6">
+                    <div class="relative rounded-xl overflow-hidden shadow-lg border-4 border-green-500">
+                        <img src="https://verifierhub.org/wp-content/uploads/2025/08/user.png" alt="Elijah Heacock"
+                            class="w-54 h-54 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="verification" class="py-10 md:py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover border-l-4 border-primary">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-16  min-w-16 h-16 bg-primary bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-navy">AI-Powered Verification</h3>
+                    </div>
+
+                    <p class="text-dark mb-6 text-lg">
+                        Utilizes advanced artificial intelligence tools with high accuracy to perform the verification
+                        processes outlined below:
+                    </p>
+
+                    <ul class="space-y-3 text-dark">
+                        <li class="flex items-start">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>Tracing email/media origins and detecting VPN/proxy usage</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>Detecting fake identities and Deepfake videos, audios or images</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover border-l-4 border-navy">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-16 min-w-16 h-16 bg-navy bg-opacity-20 rounded-xl flex items-center justify-center mr-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl md:text-2xl font-bold text-navy">Human-Powered Verification</h3>
+                    </div>
+
+                    <p class="text-dark mb-6 text-lg">
+                        This approach leverages a global network of over 400 pre-vetted and trained local verifiers to
+                        conduct both digital and human-centric verification processes. These verifiers are equipped to
+                        perform the following intelligence-gathering interviews:
+                    </p>
+
+                    <ul class="space-y-3 text-dark">
+                        <li class="flex items-start">
+                            <div class="w-2 h-2 bg-navy rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>Phone call interviews</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-2 h-2 bg-navy rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <span>Video call interviews</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="py-10 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Our Achievements</h2>
+                <p class="text-xl text-dark max-w-3xl mx-auto">
+                    Proven results and growing community trust
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="text-center p-6 bg-primary bg-opacity-10 rounded-2xl card-hover">
+                    <div class="text-4xl font-bold text-white mb-2">80</div>
+                    <div class="text-lg text-white">Interviews to validate Proof of Concept</div>
+                </div>
+                <div class="text-center p-6 bg-navy bg-opacity-10 rounded-2xl card-hover">
+                    <div class="text-4xl font-bold text-white mb-2">400</div>
+                    <div class="text-lg text-white">Recruited freelancers globally</div>
+                </div>
+                <div class="text-center p-6 bg-primary bg-opacity-10 rounded-2xl card-hover">
+                    <div class="text-4xl font-bold text-white mb-2">MVP</div>
+                    <div class="text-lg text-white">A functional MVP</div>
+                </div>
+                <div class="text-center p-6 bg-navy bg-opacity-10 rounded-2xl card-hover">
+                    <div class="text-4xl font-bold text-white mb-2">100+</div>
+                    <div class="text-lg text-white">Trial participants</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mt-8 sm:mt-12">
+
+
+                <div class="bg-gray-50 p-6 sm:p-8 rounded-2xl text-center card-hover">
+                    <h3 class="text-lg sm:text-xl font-bold text-navy mb-3 sm:mb-4">User Reviews</h3>
+                    <p class="text-sm sm:text-base text-dark mb-3 sm:mb-4">
+                        To explore our users reviews, visit:
+                    </p>
+                    <a href="https://trustpilot.com/review/verifierhub.org" target="_blank"
+                        class="text-primary font-bold hover:underline text-sm sm:text-lg break-words">
+                        trustpilot.com/review/verifierhub.org
+                    </a>
+                </div>
+
+                <div class="bg-gray-50 p-6 sm:p-8 rounded-2xl text-center card-hover">
+                    <h3 class="text-lg sm:text-xl font-bold text-navy mb-3 sm:mb-4">Management Team</h3>
+                    <p class="text-sm sm:text-base text-dark mb-3 sm:mb-4">
+                        To catch a glimpse of our management team, visit:
+                    </p>
+                    <a href="https://youtu.be/hHiRbXQttZU?si=EfYGwh_ooDHGjQ3h" target="_blank"
+                        class="text-primary font-bold hover:underline text-sm sm:text-lg break-words">
+                        youtu.be/hHiRbXQttZU?si=EfYGwh_ooDHGjQ3h
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-10 md:py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="bg-white p-8 rounded-2xl shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold text-navy mb-8 text-center"> Ready To Try Free Report Your
+                    Suspicion</h2>
+
+                <form class="space-y-6" onsubmit="handleSubmit(event)">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-dark mb-2">Name:</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-dark mb-2">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                    </div>
+
+                    <div>
+                        <label for="whatsapp" class="block text-sm font-medium text-dark mb-2">WhatsApp:</label>
+                        <input type="tel" id="whatsapp" name="whatsapp"
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-dark mb-2">Email:</label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors">
+                    </div>
+
+                    <div>
+                        <label for="summary" class="block text-sm font-medium text-dark mb-2">Summary Report:</label>
+                        <textarea id="summary" name="summary" rows="6" required
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                            placeholder="Please describe your suspicion in detail..."></textarea>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit"
+                            class="bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:opacity-90 transition-all transform hover:scale-105">
+                            Submit Report
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy text-white py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xs">&copy; 2025 VerifierHub. All rights reserved. Protecting users from online fraud
+                worldwide.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        function scrollToForm() {
+            document.getElementById('contact').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your report! We will review it and get back to you soon.');
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('backdrop-blur-md', 'bg-white');
+                header.style.backgroundColor = 'rgba(255, 255, 255, 1)';
+            } else {
+                header.classList.remove('backdrop-blur-md');
+                header.style.backgroundColor = '#ffffff';
+            }
+        });
+    </script>
+</body>
+
+</html>
